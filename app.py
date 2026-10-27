@@ -11,9 +11,8 @@ from langchain.agents import create_agent
 from langchain.tools import tool #it is  the decorator to convert any python function into a tool
 from langgraph.checkpoint.memory import InMemorySaver
 import streamlit as st
-
-api_key = os.getenv("GROQ_API_KEY")
-llm = ChatGroq(model="openai/gpt-oss-20b",api_key=api_key)
+os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
+llm = ChatGroq(model="openai/gpt-oss-20b")
 
 
 _df: pd.DataFrame = None
