@@ -79,9 +79,9 @@ def analyze_data(expression: str):
 
 
 all_tools = [get_data_info, filter_tool, analyze_data]
-
+os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
 llm = ChatGroq(model="openai/gpt-oss-20b")
-groq_api_key = os.getenv("GROQ_API_KEY")
+
 
 system_prompt = """
 You are a data analyst assistant. You help users explore and analyze CSV data.
