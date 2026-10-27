@@ -10,7 +10,7 @@ An autonomous AI agent for data analysis, automated querying, and data visualiza
 ## Quickstart
 
 1. Clone the repository:
-   git clone https://github.com/devupadhyay01/data-analyst-agent.git
+   git clone https://github.com/shamorai/data-analyst-agent.git
    cd data-analyst-agent
 
 2. Install dependencies:
