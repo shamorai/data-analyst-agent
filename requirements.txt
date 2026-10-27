@@ -4,3 +4,4 @@ langchain-groq
 langgraph
 pandas
 dotenv
+python-dotenv
