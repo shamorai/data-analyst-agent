@@ -12,6 +12,8 @@ from langchain.tools import tool #it is  the decorator to convert any python fun
 from langgraph.checkpoint.memory import InMemorySaver
 import streamlit as st
 
+os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
+llm = ChatGroq(model="openai/gpt-oss-20b")
 
 
 _df: pd.DataFrame = None
@@ -79,8 +81,6 @@ def analyze_data(expression: str):
 
 
 all_tools = [get_data_info, filter_tool, analyze_data]
-os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
-llm = ChatGroq(model="openai/gpt-oss-20b")
 
 
 system_prompt = """
